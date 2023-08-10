@@ -20,7 +20,7 @@ function HomePage(props) {
             <br/>
             <span>{props.time2}</span>
             <br />
-            <div>Next stars: {props.stars}</div>
+            {/* <div>Next stars: {props.stars}</div> */}
             <img src="/bird.png" alt="bird logo" />
         </>
     )
@@ -31,7 +31,7 @@ export async function getServerSideProps(context) {
     const json = await res.json();
     return {
         props: {
-            stars: json.stargazers_count,
+            // stars: json.stargazers_count,
             time2: new Date().toString()
         }
     }

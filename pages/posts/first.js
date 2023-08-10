@@ -15,7 +15,7 @@ export default function FirstPost(props) {
                         Home
                     </Link>
                     <div>
-                        Next stars: {props.stars}
+                        {/* Next stars: {props.stars} */}
                     </div>
                 </h2>
                 <h1>Database Credentials</h1>
@@ -24,17 +24,20 @@ export default function FirstPost(props) {
                 <p>Password: {props.password}</p>
                 <p>{props.time}</p>
                 <br />
+
             </Container>
         </>
     )
 }
 
+
+
 export async function getStaticProps() {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js')
+    const res = await fetch('https://learn-next-kappa.vercel.app/api/user')
     const json = await res.json()
     return {
         props: {
-            stars: json.stargazers_count,
+            stars: json.data,
             host: process.env.DB_HOST,
             username: process.env.DB_USER,
             password: process.env.DB_PASS,
