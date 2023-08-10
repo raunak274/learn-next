@@ -15,7 +15,7 @@ export default function FirstPost(props) {
                         Home
                     </Link>
                     <div>
-                        {/* Next stars: {props.stars} */}
+                        Next stars: {props.stars}
                     </div>
                 </h2>
                 <h1>Database Credentials</h1>
