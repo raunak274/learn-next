@@ -12,8 +12,11 @@ function HomePage(props) {
             {/* <Link href="/posts/first">
                 First Post
             </Link> */}
-            <span onClick={() => Router.push('/posts/one')}>First Post</span>
+            <span onClick={() => Router.push('/posts/one')}>Post one</span>
+            <br></br>
             <span onClick={() => Router.push('/?counter=1', undefined, {shallow: true})}>Reload</span>
+            <br/>
+            <span onClick={() => Router.push('/posts/first')}>First Post</span>
             <br/>
             <div>Next stars: {props.stars}</div>
             <img src="/bird.png" alt="bird logo" />
