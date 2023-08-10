@@ -22,6 +22,7 @@ export default function FirstPost(props) {
                 <p>Host: {props.host}</p>
                 <p>Username: {props.username}</p>
                 <p>Password: {props.password}</p>
+                <p>{props.time}</p>
                 <br />
             </Container>
         </>
@@ -36,7 +37,8 @@ export async function getStaticProps() {
             stars: json.stargazers_count,
             host: process.env.DB_HOST,
             username: process.env.DB_USER,
-            password: process.env.DB_PASS
+            password: process.env.DB_PASS,
+            time: new Date().toString()
         }
     }
 }
